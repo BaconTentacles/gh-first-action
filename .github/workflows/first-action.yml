@@ -21,4 +21,7 @@ jobs:
         run: echo "Hello, world!"
         # Name of the second step
       - name: Print goodbye
-        run: echo "Done - Bye!"
+        run: |
+          echo "It's been fun."
+          echo "But now we're Done."
+          echo "Bye!"
