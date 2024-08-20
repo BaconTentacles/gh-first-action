@@ -1,0 +1,24 @@
+# Let's do this from scratch, shall we?
+# Single workflow with one job that has 2 steps
+
+# Let's give it a name
+name: First Workflow
+
+# This workflow is manually triggered only (at present)
+on: workflow_dispatch
+
+# Now let's define what this workflow actually does, via a collection of jobs.
+jobs:
+  # Define our first job
+  first-job:
+    # Where will this job execute?
+    runs-on: ubuntu-latest
+    # Define the steps that will run as a part of this job.
+    steps:
+        # Name of the first step
+      - name: Print greeting
+        # The command that is executed on the command line of the runner
+        run: echo "Hello, world!"
+        # Name of the second step
+      - name: Print goodbye
+        run: echo "Done - Bye!"
